@@ -1,0 +1,11 @@
+<div class="container-fluid bg-3 text-center">
+  <h3>Suggested Products</h3><br>
+  <div class="row">
+    <div *ngFor="let product of products; let i = index">
+      <app-tile-item
+        [product]="product"
+        [index]="i">
+      </app-tile-item>
+    </div>
+  </div>
+</div><br>
