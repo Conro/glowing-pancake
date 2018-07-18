@@ -8,6 +8,7 @@ import { TileDetailComponent } from './tiles/tile-detail/tile-detail.component';
 import { TileItemComponent } from './tiles/tile-item/tile-item.component';
 import { TileListComponent } from './tiles/tile-list/tile-list.component';
 import { HeaderComponent } from './header/header.component';
+import { ChatModule } from './chat/chat.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    ChatModule
   ],
   providers: [DummyDataService],
   bootstrap: [AppComponent]
