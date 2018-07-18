@@ -19,7 +19,7 @@ export class TileListComponent implements OnInit, OnDestroy {
 
     console.log(this.services);
 
-    let item1 = this.services.find(i => i.name === "Mr. Nice");
+    const item1 = this.services.find(i => i.name === 'Mr. Nice');
     console.log(item1.id);
   }
 

@@ -1,4 +1,24 @@
 <div class="col-sm-12">
   <p>{{ tileTitle }}</p>
-  <img src={{ product.image }} class="img-responsive" style="width:100%" alt="Image">
+  <!--<img src={{  }} class="img-responsive" style="width:100%" alt="Image">-->
 </div>
+
+<button style="cursor: pointer;"
+  (click)="openModal(modal)">
+  <div>
+    {{ tileTitle }}
+  </div>
+</button>
+
+<!--<ng-template #modal>-->
+  <!--<div class="modal-header">-->
+    <!--<h4 class="modal-title">This is a description.</h4>-->
+  <!--</div>-->
+  <!--<div class="modal-body">-->
+    <!--<div>Name: </div>-->
+    <!--<div>Description: </div>-->
+  <!--</div>-->
+  <!--<div class="modal-footer">-->
+
+  <!--</div>-->
+<!--</ng-template>-->
