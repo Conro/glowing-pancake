@@ -8,5 +8,21 @@
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts",
+    "./main.ts",
+    "../node_modules/api-ai-javascript/ts/ApiAiClient.ts",
+    "../node_modules/api-ai-javascript/index.ts",
+    "../node_modules/api-ai-javascript/ts/ApiAiConstants.ts",
+    "../node_modules/api-ai-javascript/ts/Errors.ts",
+    "../node_modules/api-ai-javascript/ts/Interfaces.ts",
+    "../node_modules/api-ai-javascript/ts/Request/EventRequest.ts",
+    "../node_modules/api-ai-javascript/ts/Request/TextRequest.ts",
+    "../node_modules/api-ai-javascript/ts/Request/Request.ts",
+    "../node_modules/api-ai-javascript/ts/XhrRequest.ts",
+    "../src/polyfills.ts",
+    "../src/app/chat/chat-dialog/chat-dialog.component.ts",
   ]
 }
