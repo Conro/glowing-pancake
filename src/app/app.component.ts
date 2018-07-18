@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  services: Service[];
+  //services: Service[];
 
   constructor(private dummyDataService: DummyDataService) { }
-
+ /*
   ngOnInit() {
     this.getServices();
     console.log(this.services);
@@ -24,6 +24,6 @@ export class AppComponent {
   getServices(): void {
     this.dummyDataService.getServices()
       .subscribe(services => this.services = services)
-  }
+  } */
 
 }
