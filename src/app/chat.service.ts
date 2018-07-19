@@ -39,15 +39,15 @@ export class ChatService {
       const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
       this.sentMessages.push(message);
       this.generateContent(message);
-    
-    }    
+
+    }
 
     return this.client.textRequest(msg)
-               .then(res => {
-                  const speech = res.result.fulfillment.speech;
-                  const botMessage = new Message(speech, 'bot');
-                  this.update(botMessage);
-               });
+      .then(res => {
+        const speech = res.result.fulfillment.speech;
+        const botMessage = new Message(speech, 'bot');
+        this.update(botMessage);
+      });
   }
 
 
@@ -62,16 +62,19 @@ export class ChatService {
   }
 
   generateContent(contentMessage: ContentMessage) {
-    const messageExploded : string[] = contentMessage.message.split(" ");
-    
-    messageExploded.forEach( ( word ) => {
-      this.dummyDataService.allServices.forEach( (service) => {
-        if (service.keywords.includes(word) && !service.isUsed) {
-          this.dummyDataService.addService(service);  
-          service.isUsed = true;
-        }
-      });
-    });
+    this.dummyDataService.generateContent(contentMessage.message);
+
+    // const messageExploded : string[] = contentMessage.message.split(" ");
+    // const allServices = this.dummyDataService.getAllServices();
+    //
+    // messageExploded.forEach( ( word ) => {
+    //   this.dummyDataService.allServices.forEach( (service) => {
+    //     if (service.keywords.includes(word) && !service.isUsed) {
+    //       this.dummyDataService.addService(service);
+    //       service.isUsed = true;
+    //     }
+    //   });
+    // });
   }
 
 }

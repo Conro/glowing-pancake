@@ -4,6 +4,7 @@ import { Http, Response } from '@angular/http';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { SERVICES } from '../data';
+import {ContentMessage} from "../chat.service";
 
 @Injectable()
 export class DummyDataService {
@@ -46,4 +47,17 @@ export class DummyDataService {
     });
 
   }
-}
+
+  generateContent(contentMessage: string) {
+    const messageExploded : string[] = contentMessage.split(" ");
+    // const allServices = this.getAllServices();
+
+    messageExploded.forEach( ( word ) => {
+      this.allServices.forEach( (service) => {
+        if (service.keywords.includes(word) && !service.isUsed) {
+          this.addService(service);
+          service.isUsed = true;
+        }
+      });
+    });
+  }}
