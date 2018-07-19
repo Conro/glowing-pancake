@@ -14,7 +14,7 @@ export class TilesComponent implements OnInit {
   constructor(private dummyDataService: DummyDataService) { }
 
   ngOnInit() {
-
+    console.log(this.dummyDataService.allServices);
   }
 
   test(multiple?: number) {
