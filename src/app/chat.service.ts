@@ -11,7 +11,7 @@ import { Service } from './Models/service.model';
 export class Message {
   constructor(public content: string, public sentBy: string) {}
 }
-
+//wrapper for messages
 export class ContentMessage {
   constructor(public message: string, public isUsed: boolean, public sentBy: string) {}
 }
