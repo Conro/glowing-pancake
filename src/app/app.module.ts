@@ -9,6 +9,10 @@ import { TileItemComponent } from './tiles/tile-item/tile-item.component';
 import { TileListComponent } from './tiles/tile-list/tile-list.component';
 import { HeaderComponent } from './header/header.component';
 import { ChatModule } from './chat/chat.module';
+import { MemberFormComponent } from './member-form/member-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ResultsComponent } from './results/results.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -18,11 +22,16 @@ import { ChatModule } from './chat/chat.module';
     TileItemComponent,
     TileListComponent,
     HeaderComponent,
+    MemberFormComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    ChatModule
+    ChatModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [DummyDataService],
   bootstrap: [AppComponent]

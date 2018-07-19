@@ -1,0 +1,49 @@
+<div class="row" style="padding-left: 10%">
+  <div class="col-xs-12">
+
+    <form [formGroup]="entryForm"
+          (ngSubmit)="onSubmit(f)"
+    #f="ngForm">
+
+      <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <label
+            for="house">Do you own a house?
+          </label>
+          <input
+            type="text"
+            id="house"
+            formControlName="house"
+            class="form-control">
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label
+              for="pet">Do you own a pet?
+            </label>
+            <input
+              type="text"
+              id="pet"
+              formControlName="pet"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" [disabled]="!f.valid">
+            Submit
+          </button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>
