@@ -12,7 +12,7 @@ export class AppComponent {
   services: Service[] = [];
 
   constructor(
-    //private dummyDataService: DummyDataService
+    private dummyDataService: DummyDataService
     ) { }
 
   ngOnInit() {

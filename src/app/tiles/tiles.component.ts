@@ -9,23 +9,26 @@ import {DummyDataService} from "../Services/dummy-data.service";
 })
 export class TilesComponent implements OnInit {
 
+  allServices : Service[] = [];
+
   constructor(private dummyDataService: DummyDataService) { }
 
   ngOnInit() {
+
   }
 
   test(multiple?: number) {
     if(multiple && multiple === 1) {
-      var tmpServices: Service[] = [
-        { "id": 0, "name": "swag" },
-        { "id": 1, "name": "yeye" },
-        { "id": 2, "name": "waddup" }
-      ];
+      
+      let tmpServices : Service[] = [];
+      tmpServices.push(this.allServices[0]);
+      tmpServices.push(this.allServices[1]);
+      tmpServices.push(this.allServices[2]);
 
       this.dummyDataService.addServices(tmpServices);
     }
     else {
-      let tmpService = new Service(1, 'testtt');
+      let tmpService = new Service(1, 'testtt', 'lala', '', ['2']);
       this.dummyDataService.addService(tmpService);
     }
   }
