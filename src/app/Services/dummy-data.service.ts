@@ -9,11 +9,12 @@ import { SERVICES } from '../data'
 export class DummyDataService {
 
   activeServices: Service[] = [];
+  allServices: Service[] = [];
 
   constructor(private http: Http) { }
 
   ngOnInit() {
-  
+    this.allServices = this.getAllServices();
   }
 
   getAllServices(): Service[] {
