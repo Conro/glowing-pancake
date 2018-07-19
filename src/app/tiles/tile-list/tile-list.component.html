@@ -1,5 +1,5 @@
 <div class="container-fluid bg-3 text-center">
-  <h3>Products</h3><br>
+  <h2 *ngIf='dummyDataService.getActiveServices().count !== 0'>Requested Products</h2><br>
   <div class="row">
     <div *ngFor="let service of dummyDataService.getActiveServices(); let i = index">
       <app-tile-item
@@ -9,7 +9,9 @@
       </app-tile-item>
     </div>
   </div>
-
+  <hr *ngIf='dummyDataService.getSuggestedServices().count !== 0'>
+  <hr *ngIf='dummyDataService.getSuggestedServices().count !== 0'>
+  <h2 *ngIf='dummyDataService.getSuggestedServices().count !== 0' >Suggested Products</h2><br>
   <div class="row">
       <div *ngFor="let service of dummyDataService.getSuggestedServices(); let i = index">
         <app-tile-item
