@@ -26,28 +26,39 @@ export class ChatService {
 
   sentMessages : ContentMessage[] = [];
 
-  constructor(private dummyDataService: DummyDataService) {}
+  constructor(private dummyDataService: DummyDataService) { }
 
   // Sends and receives messages via DialogFlow
-  converse(msg: string) {
+  converse(msg: string, opening: boolean) {
 
-    const userMessage = new Message(msg, 'user');
+    if (opening) {
 
-    if (userMessage.content.length > 0) {
-      this.update(userMessage);
+      return this.client.textRequest(msg)
+        .then(res => {
+          const speech = res.result.fulfillment.speech;
+          const botMessage = new Message(speech, 'bot');
+          this.update(botMessage);
+        });
 
-      const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
-      this.sentMessages.push(message);
-      this.generateContent(message);
+    } else {
+      const userMessage = new Message(msg, 'user');
 
+      if (userMessage.content.length > 0) {
+        this.update(userMessage);
+  
+        const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
+        this.sentMessages.push(message);
+        this.generateContent(message);
+  
+      }
+  
+      return this.client.textRequest(msg)
+        .then(res => {
+          const speech = res.result.fulfillment.speech;
+          const botMessage = new Message(speech, 'bot');
+          this.update(botMessage);
+        });
     }
-
-    return this.client.textRequest(msg)
-      .then(res => {
-        const speech = res.result.fulfillment.speech;
-        const botMessage = new Message(speech, 'bot');
-        this.update(botMessage);
-      });
   }
 
 
