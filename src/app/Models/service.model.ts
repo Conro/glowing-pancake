@@ -4,6 +4,7 @@ export class Service {
        public name: string,
        public desc: string,
        public img: string,
-       public keywords: string[]
+       public keywords: string[],
+       public isUsed: boolean
     ) {}
  }
