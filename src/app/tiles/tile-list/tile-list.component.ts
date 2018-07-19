@@ -2,6 +2,12 @@ import { DummyDataService } from './../../Services/dummy-data.service';
 import { Service } from './../../Models/service.model';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 
+
+import {CarouselModule} from 'primeng/carousel';
+
+// For MDB Angular Free
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
+
 @Component({
   selector: 'app-tile-list',
   templateUrl: './tile-list.component.html',
@@ -32,5 +38,7 @@ export class TileListComponent implements OnInit, OnDestroy {
   onNewProduct() {
     // this.router.navigate(['new'], {relativeTo: this.route});
   }
+
+
 
 }
