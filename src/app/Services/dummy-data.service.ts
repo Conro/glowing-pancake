@@ -1,5 +1,5 @@
 import { Service } from './../Models/service.model';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -35,8 +35,15 @@ export class DummyDataService {
   removeService(service: Service) {
     this.activeServices.forEach( (item, index) => {
       if(item.id === service.id) {
+        this.allServices.forEach( (allService) => {
+          if (service.id == allService.id) {
+            allService.isUsed = false;
+          }
+          
+        });
         this.activeServices.splice(index,1);
       }
     });
+
   }
 }

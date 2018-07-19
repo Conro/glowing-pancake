@@ -28,20 +28,19 @@ export class ChatService {
 
   constructor(private dummyDataService: DummyDataService) {}
 
-  ngOnInit() {
-    //this.allServices = this.dummyDataService.getAllServices();
-  }
-
   // Sends and receives messages via DialogFlow
   converse(msg: string) {
-    //this.printArrayItems(this.sentMessages);
 
     const userMessage = new Message(msg, 'user');
-    this.update(userMessage);
 
-    const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
-    this.sentMessages.push(message);
-    this.generateContent(message);
+    if (userMessage.content.length > 0) {
+      this.update(userMessage);
+
+      const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
+      this.sentMessages.push(message);
+      this.generateContent(message);
+    
+    }    
 
     return this.client.textRequest(msg)
                .then(res => {
@@ -64,7 +63,6 @@ export class ChatService {
 
   generateContent(contentMessage: ContentMessage) {
     const messageExploded : string[] = contentMessage.message.split(" ");
-    const allServices = this.dummyDataService.getAllServices();
     
     messageExploded.forEach( ( word ) => {
       this.dummyDataService.allServices.forEach( (service) => {
