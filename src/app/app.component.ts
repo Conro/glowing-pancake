@@ -1,4 +1,3 @@
-import { SERVICES } from './data';
 import { Service } from './Models/service.model';
 import { DummyDataService } from './Services/dummy-data.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +11,9 @@ export class AppComponent {
   title = 'app';
   services: Service[] = [];
 
-  constructor(private dummyDataService: DummyDataService) { }
+  constructor(
+    private dummyDataService: DummyDataService
+    ) { }
 
   ngOnInit() {
     this.services = this.dummyDataService.getAllServices();
@@ -34,4 +35,4 @@ export class AppComponent {
       this.dummyDataService.addService(tmpService);
     }
   }
-}
+} 
