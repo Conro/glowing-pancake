@@ -13,5 +13,8 @@ export const SERVICES: Service[] = [
   { id: 10, name: 'Life Insurance', desc: '', img: '', keywords: ['life', 'insurance', 'marriage'], isUsed: false, suggestedIds:[] },
   { id: 11, name: 'Home Insurance', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['house', 'home', 'homeowner'], isUsed: false, suggestedIds:[]},
   { id: 12, name: 'Florida', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['Florida'], isUsed: false, suggestedIds:[11]},
-  { id: 13, name: 'Flood', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['flood', 'flooding'], isUsed: false, suggestedIds:[12]}
+  { id: 13, name: 'Flood', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['flood', 'flooding'], isUsed: false, suggestedIds:[12]},
+  { id: 14, name: 'Renters Insurance', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['rent', 'renter','renting'], isUsed: false, suggestedIds:[11]},
+  { id: 15, name: 'High Value Home', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['high', 'value'], isUsed: false, suggestedIds:[11]},
+  { id: 16, name: 'Jewelry Insurance', desc: '', img: 'https://i.imgur.com/KsUiXyI.jpg', keywords: ['jewelry'], isUsed: false, suggestedIds:[10]}
 ];
