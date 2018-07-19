@@ -55,10 +55,9 @@ export class DummyDataService {
   removeSuggestedService(service: Service) {
     this.suggestedServices.forEach( (item, index) => {
       if(item.id === service.id) {
-        this.activeServices.splice(index,1);
+        this.suggestedServices.splice(index,1);
       }
     });
-
   }
 
   generateContent(contentMessage: string) {

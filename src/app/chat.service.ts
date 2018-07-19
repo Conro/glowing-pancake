@@ -58,7 +58,7 @@ export class ChatService {
               const botMessage = new Message(speech, 'bot');
               this.update(botMessage);
             });
-        }, 300);
+        }, 100);
       
     }
   }
