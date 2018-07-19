@@ -23,8 +23,9 @@
 }
 
 #send-container {
-    bottom: 0px;
-    right: 0px;
+    position:absolute;
+    bottom: 10%;
+    right: 2%;
 }
 
 .message.to + .message.to,
