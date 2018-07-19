@@ -18,6 +18,15 @@
 
 }
 
+#container {
+    height:100%;
+}
+
+#send-container {
+    bottom: 0px;
+    right: 0px;
+}
+
 .message.to + .message.to,
 .message.from + .message.from {
 margin-top: -10px;
