@@ -1,5 +1,5 @@
 import { Service } from './../Models/service.model';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -11,10 +11,11 @@ export class DummyDataService {
   activeServices: Service[] = [];
   public allServices: Service[] = [];
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) { 
+    this.allServices = this.getAllServices()
+  }
 
   ngOnInit() {
-    this.allServices = this.getAllServices();
   }
 
   getAllServices(): Service[] {
