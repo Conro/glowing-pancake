@@ -41,23 +41,25 @@ export class ChatService {
         });
 
     } else {
-      const userMessage = new Message(msg, 'user');
+        const userMessage = new Message(msg, 'user');
 
-      if (userMessage.content.length > 0) {
-        this.update(userMessage);
-  
-        const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
-        this.sentMessages.push(message);
-        this.generateContent(message);
-  
-      }
-  
-      return this.client.textRequest(msg)
-        .then(res => {
-          const speech = res.result.fulfillment.speech;
-          const botMessage = new Message(speech, 'bot');
-          this.update(botMessage);
-        });
+        if (userMessage.content.length > 0) {
+          this.update(userMessage);
+    
+          const message = new ContentMessage(userMessage.content, false, userMessage.sentBy);
+          this.sentMessages.push(message);
+          this.generateContent(message);
+    
+        }
+        setTimeout( () => {
+          return this.client.textRequest(msg)
+            .then(res => {
+              const speech = res.result.fulfillment.speech;
+              const botMessage = new Message(speech, 'bot');
+              this.update(botMessage);
+            });
+        }, 300);
+      
     }
   }
 

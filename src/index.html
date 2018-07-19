@@ -10,6 +10,15 @@
   <!-- Milligram CSS minified -->
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
+  <script>
+    function updateScroll(){
+        var element = document.getElementById("container");
+        element.scrollTop = element.scrollHeight;
+    }
+
+    setInterval(updateScroll,500);
+  
+  </script>
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -5,8 +5,19 @@
       <app-tile-item
         [service]="service"
         [index]="i"
-        (click)=dummyDataService.removeService(service)>
+        (click)=dummyDataService.removeRequestedService(service)>
       </app-tile-item>
     </div>
   </div>
+
+  <div class="row">
+      <div *ngFor="let service of dummyDataService.getSuggestedServices(); let i = index">
+        <app-tile-item
+          [service]="service"
+          [index]="i"
+          (click)=dummyDataService.removeSuggestedService(service)>
+        </app-tile-item>
+      </div>
+    </div>
+
 </div><br>

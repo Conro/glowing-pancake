@@ -10,6 +10,7 @@ import {ContentMessage} from "../chat.service";
 export class DummyDataService {
 
   activeServices: Service[] = [];
+  suggestedServices: Service[] = [];
   public allServices: Service[] = [];
 
   constructor(private http: Http) { this.allServices = this.getAllServices(); }
@@ -20,6 +21,9 @@ export class DummyDataService {
 
   getActiveServices(): Service[] {
     return this.activeServices;
+  }
+  getSuggestedServices(): Service[] {
+    return this.suggestedServices;
   }
 
   addService(service: Service) {
@@ -33,7 +37,7 @@ export class DummyDataService {
     });
   }
 
-  removeService(service: Service) {
+  removeRequestedService(service: Service) {
     this.activeServices.forEach( (item, index) => {
       if(item.id === service.id) {
         this.allServices.forEach( (allService) => {
@@ -48,6 +52,15 @@ export class DummyDataService {
 
   }
 
+  removeSuggestedService(service: Service) {
+    this.suggestedServices.forEach( (item, index) => {
+      if(item.id === service.id) {
+        this.activeServices.splice(index,1);
+      }
+    });
+
+  }
+
   generateContent(contentMessage: string) {
     const messageExploded : string[] = contentMessage.split(" ");
     // const allServices = this.getAllServices();
@@ -55,9 +68,32 @@ export class DummyDataService {
     messageExploded.forEach( ( word ) => {
       this.allServices.forEach( (service) => {
         if (service.keywords.includes(word) && !service.isUsed) {
+          
           this.addService(service);
           service.isUsed = true;
+
+          this.generateSuggestedContent(service);
+        }
+        this.checkDuplicateContent(service);
+      });
+    });
+  }
+
+  generateSuggestedContent(currentService: Service) {
+      currentService.suggestedIds.forEach( (id) => {
+        this.suggestedServices.push(this.allServices[id-1]);
+      })
+  }
+
+  checkDuplicateContent(currentService: Service) {
+    this.activeServices.forEach( (activeService) => {
+      this.suggestedServices.forEach( (suggestedService) => {
+        if (suggestedService.id == activeService.id) {
+          this.removeSuggestedService(suggestedService);
         }
       });
     });
-  }}
+  }
+
+
+}
