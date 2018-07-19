@@ -2,9 +2,6 @@ import { DummyDataService } from './../../Services/dummy-data.service';
 import { Service } from './../../Models/service.model';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 
-// For MDB Angular Free
-import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
-
 @Component({
   selector: 'app-tile-list',
   templateUrl: './tile-list.component.html',

@@ -12,7 +12,7 @@ export const SERVICES: Service[] = [
   { id: 9, name: 'Watercraft', desc: '', img: '../assets/images/watercraft.jpg', keywords: ['watercraft', 'boat', 'yacht','jet', 'ski'], isUsed: false, suggestedIds:[12] },
   { id: 10, name: 'Life Insurance', desc: '', img: '../assets/images/life-insurance.jpg', keywords: ['marriage'], isUsed: false, suggestedIds:[] },
   { id: 11, name: 'Home Insurance', desc: '', img: '../assets/images/high-value-home.jpg', keywords: ['house', 'home', 'homeowner'], isUsed: false, suggestedIds:[]},
-  { id: 12, name: 'Florida', desc: '', img: '../assets/images/florida-property.jpg', keywords: ['Florida'], isUsed: false, suggestedIds:[11]},
+  { id: 12, name: 'Florida', desc: '', img: '../assets/images/florida-property.jpg', keywords: ['florida'], isUsed: false, suggestedIds:[11]},
   { id: 13, name: 'Flood', desc: '', img: '../assets/images/flood.jpg', keywords: ['flood', 'flooding'], isUsed: false, suggestedIds:[12]},
   { id: 14, name: 'Renters Insurance', desc: '', img: '../assets/images/renters-insurance.jpg', keywords: ['rent', 'renter','renting'], isUsed: false, suggestedIds:[11]},
   { id: 15, name: 'High Value Home', desc: '', img: '../assets/images/high-value-home.jpg', keywords: ['high', 'value'], isUsed: false, suggestedIds:[11]},
