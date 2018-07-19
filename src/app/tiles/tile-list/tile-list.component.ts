@@ -9,22 +9,24 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 })
 export class TileListComponent implements OnInit, OnDestroy {
 
-  services: Service[] = null;
+  //services: Service[] = null;
 
-  constructor(private dummyDataService: DummyDataService) { }
+  constructor(public dummyDataService: DummyDataService) { }
 
   ngOnInit() {
+    /*
     this.dummyDataService.getServices()
       .subscribe(services => this.services = services);
+    */
 
-    console.log(this.services);
+    //console.log(this.services);
 
-    const item1 = this.services.find(i => i.name === 'Mr. Nice');
-    console.log(item1.id);
+    //let item1 = this.services.find(i => i.name === "Mr. Nice");
+    //console.log(item1.id);
   }
 
   ngOnDestroy() {
-    this.services = null;
+    //this.services = null;
   }
 
   onNewProduct() {

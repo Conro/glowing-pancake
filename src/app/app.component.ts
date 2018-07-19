@@ -25,5 +25,19 @@ export class AppComponent {
     this.dummyDataService.getServices()
       .subscribe(services => this.services = services)
   } */
+  test(multiple?: number) {
+    if(multiple && multiple === 1) {
+      var tmpServices: Service[] = [
+        { "id": 0, "name": "swag" },
+        { "id": 1, "name": "yeye" },
+        { "id": 2, "name": "waddup" }
+      ];
 
+      this.dummyDataService.addServices(tmpServices);
+    }
+    else {
+      let tmpService = new Service(1, 'testtt');
+      this.dummyDataService.addService(tmpService);
+    }
+  }
 }

@@ -1,12 +1,12 @@
 <div class="container-fluid bg-3 text-center">
   <h3>Suggested Products</h3><br>
   <div class="row">
-    <div *ngFor="let service of services; let i = index">
+    <div *ngFor="let service of dummyDataService.getActiveServices(); let i = index">
       <app-tile-item
         [service]="service"
-        [index]="i">
+        [index]="i"
+        (click)=dummyDataService.removeService(service)>
       </app-tile-item>
     </div>
   </div>
-</div>
-<br>
+</div><br>

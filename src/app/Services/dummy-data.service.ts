@@ -7,9 +7,39 @@ import { SERVICES } from '../data';
 
 @Injectable()
 export class DummyDataService {
-   constructor(private http: Http) {
-   }
-   getServices(): Observable<Service[]> {
-      return of(SERVICES);
-    }
+
+  activeServices: Service[] = [];
+
+  constructor(private http: Http) { }
+
+  ngOnInit() {
+  
+  }
+
+  getAllServices(): Service[] {
+    return SERVICES;
+  }
+
+  getActiveServices(): Service[] {
+    return this.activeServices;
+  }
+
+  addService(service: Service) {
+    this.activeServices.push(service);
+    console.log(this.activeServices);
+  }
+
+  addServices(services: Service[]) {
+    services.forEach(element => {
+      this.activeServices.push(element);
+    });
+  }
+
+  removeService(service: Service) {
+    this.activeServices.forEach( (item, index) => {
+      if(item.id === service.id) {
+        this.activeServices.splice(index,1);
+      }
+    });
+  }
 }
