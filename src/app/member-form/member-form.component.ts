@@ -27,9 +27,8 @@ export class MemberFormComponent implements OnInit {
 
   private initForm() {
     const house = '';
+    const car = '';
     const pet = '';
-    const florida = '';
-    const boat = '';
     const name = '';
     const age = '';
     const branch = '';
@@ -37,9 +36,8 @@ export class MemberFormComponent implements OnInit {
 
     this.entryForm = new FormGroup({
       'house': new FormControl(house),
+      'car': new FormControl(car),
       'pet': new FormControl(pet),
-      'florida': new FormControl(florida),
-      'boat': new FormControl(boat),
       'name': new FormControl(name),
       'age': new FormControl(age),
       'branch': new FormControl(branch),
@@ -63,19 +61,14 @@ export class MemberFormComponent implements OnInit {
     if (house) {
       this.dummyService.generateContent('house');
     }
+    const car = form.value.car;
+    if (car) {
+      this.dummyService.generateContent('car');
+    }
     const pet = form.value.pet;
     if (pet) {
       this.dummyService.generateContent('pet');
     }
-    const florida = form.value.florida;
-    if (florida) {
-      this.dummyService.generateContent('florida');
-    }
-    const boat = form.value.boat;
-    if (boat) {
-      this.dummyService.generateContent('boat');
-    }
-
     this.router.navigate(['../results'], {relativeTo: this.route});
   }
 }
