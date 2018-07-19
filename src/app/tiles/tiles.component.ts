@@ -28,7 +28,7 @@ export class TilesComponent implements OnInit {
       this.dummyDataService.addServices(tmpServices);
     }
     else {
-      let tmpService = new Service(1, 'testtt', 'lala', '', ['2'], false, [1]);
+      let tmpService = new Service(1, 'testtt', 'lala', '../assets/images/auto.jpg', ['2'], false, [1]);
       this.dummyDataService.addService(tmpService);
     }
   }
