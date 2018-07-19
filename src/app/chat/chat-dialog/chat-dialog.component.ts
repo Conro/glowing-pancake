@@ -24,7 +24,7 @@ export class ChatDialogComponent implements OnInit {
     .pipe( scan((acc, val) => acc.concat(val)) );
 
     this.chat.converse("This is a welcome message", true);
-    
+
   }
 
   sendMessage() {

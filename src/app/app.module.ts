@@ -13,6 +13,7 @@ import { MemberFormComponent } from './member-form/member-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {MemberService} from "./Services/member.service";
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import {AppRoutingModule} from "./app-routing.module";
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [DummyDataService],
+  providers: [DummyDataService, MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

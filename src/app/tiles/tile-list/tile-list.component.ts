@@ -2,9 +2,6 @@ import { DummyDataService } from './../../Services/dummy-data.service';
 import { Service } from './../../Models/service.model';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 
-
-import {CarouselModule} from 'primeng/carousel';
-
 // For MDB Angular Free
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 
