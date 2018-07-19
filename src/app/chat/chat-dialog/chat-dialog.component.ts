@@ -22,6 +22,7 @@ export class ChatDialogComponent implements OnInit {
     // appends to array after each new message is added to feedSource
     this.messages = this.chat.conversation.asObservable()
     .pipe( scan((acc, val) => acc.concat(val)) );
+    this.chat.converse('this is a welcome message');
   }
 
   sendMessage() {
