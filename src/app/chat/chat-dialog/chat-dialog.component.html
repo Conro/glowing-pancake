@@ -1,18 +1,23 @@
-<h1>Brian P</h1>
 
-<ng-container *ngFor="let message of messages | async">
+<div id="container">
+  <h1>Brian P Bot</h1>
 
-  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                    'to':   message.sentBy === 'user' }">
-    {{ message.content }}
+  <ng-container *ngFor="let message of messages | async">
+  
+    <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+      {{ message.content }}
+    </div>
+  
+  </ng-container>
+  
+  
+  <div id="send-container">
+    <label for="nameField">Your Message</label>
+  
+  
+    <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+    
+    <button (click)="sendMessage()">Send</button>
   </div>
-
-</ng-container>
-
-
-<label for="nameField">Your Message</label>
-
-
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-
-<button (click)="sendMessage()">Send</button>
+</div>
