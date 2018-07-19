@@ -14,6 +14,9 @@ export const SERVICES: Service[] = [
   { id: 11, name: 'Home Insurance', desc: '', img: '../assets/images/high-value-home.jpg', keywords: ['house', 'home', 'homeowner'], isUsed: false, suggestedIds:[]},
   { id: 12, name: 'Florida', desc: '', img: '../assets/images/florida-property.jpg', keywords: ['Florida'], isUsed: false, suggestedIds:[11]},
   { id: 13, name: 'Flood', desc: '', img: '../assets/images/flood.jpg', keywords: ['flood', 'flooding'], isUsed: false, suggestedIds:[12]},
+  { id: 14, name: 'Renters Insurance', desc: '', img: '../assets/images/renters-insurance.jpg', keywords: ['rent', 'renter','renting'], isUsed: false, suggestedIds:[11]},
+  { id: 15, name: 'High Value Home', desc: '', img: '../assets/images/high-value-home.jpg', keywords: ['high', 'value'], isUsed: false, suggestedIds:[11]},
+  { id: 16, name: 'Jewelry Insurance', desc: '', img: '../assets/images/jewerly-insruance.jpg', keywords: ['jewelry'], isUsed: false, suggestedIds:[10]},
   { id: 15, name: 'Cruises', desc: '', img: '../assets/images/cruises.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
   { id: 16, name: 'Flights', desc: '', img: '../assets/images/flights.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
   { id: 14, name: 'Hotels & Resorts', desc: '', img: '../assets/images/hotels-and-resorts.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
@@ -23,5 +26,5 @@ export const SERVICES: Service[] = [
   { id: 20, name: 'Flowers', desc: '', img: '../assets/images/ftd_bingo.png', keywords: [''], isUsed: false, suggestedIds:[12]},
   { id: 21, name: 'FedEx', desc: '', img: '../assets/images/shipping.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
   { id: 22, name: 'TurboTax', desc: '', img: '../assets/images/tax-preparation.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
-  { id: 23, name: 'Car Rentals', desc: '', img: '../assets/images/car-rental.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
+  { id: 23, name: 'Car Rentals', desc: '', img: '../assets/images/car-rental.jpg', keywords: [''], isUsed: false, suggestedIds:[12]}
 ];

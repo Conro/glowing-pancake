@@ -3,7 +3,7 @@
     margin: 0 15px 10px;
     padding: 15px 20px;
     position: relative;
-    font-weight: bold;
+    font-size: 12pt;
 }
 .message.to {
     background-color: #2095FE;
@@ -16,6 +16,16 @@
     color: #363636;
     margin-right: 100px;
 
+}
+
+#container {
+    height:100%;
+}
+
+#send-container {
+    position:absolute;
+    bottom: 10%;
+    right: 2%;
 }
 
 .message.to + .message.to,
