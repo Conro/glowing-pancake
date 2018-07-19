@@ -63,17 +63,19 @@ export class ChatService {
   }
 
   generateContent(contentMessage: ContentMessage) {
-    const messageExploded : string[] = contentMessage.message.split(" ");
-    const allServices = this.dummyDataService.getAllServices();
-    
-    messageExploded.forEach( ( word ) => {
-      this.dummyDataService.allServices.forEach( (service) => {
-        if (service.keywords.includes(word) && !service.isUsed) {
-          this.dummyDataService.addService(service);  
-          service.isUsed = true;
-        }
-      });
-    });
+    this.dummyDataService.generateContent(contentMessage.message);
+
+    // const messageExploded : string[] = contentMessage.message.split(" ");
+    // const allServices = this.dummyDataService.getAllServices();
+    //
+    // messageExploded.forEach( ( word ) => {
+    //   this.dummyDataService.allServices.forEach( (service) => {
+    //     if (service.keywords.includes(word) && !service.isUsed) {
+    //       this.dummyDataService.addService(service);
+    //       service.isUsed = true;
+    //     }
+    //   });
+    // });
   }
 
 }
