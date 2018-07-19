@@ -8,7 +8,7 @@ import { Service } from './../../Models/service.model';
 })
 export class TileItemComponent implements OnInit {
 
-  @Input() product: Service;
+  @Input() service: Service;
   @Input() index: number;
 
   tileTitle: String = 'thisIsATest';
@@ -16,7 +16,7 @@ export class TileItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      this.tileTitle = this.product.name;
+      this.tileTitle = this.service.name;
   }
 
 }

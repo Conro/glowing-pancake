@@ -1,3 +1,11 @@
 <app-header></app-header>
-<app-tiles></app-tiles>
-<chat-dialog></chat-dialog>
+
+<div class="container-fluid">
+    <div class="row">
+        <app-tiles class="col-9"></app-tiles>
+        <chat-dialog class="col-3"></chat-dialog>
+    </div>
+</div>
+
+<button (click)="test()" class="button btn-primary">Add 1</button>
+<button (click)="test(1)" class="button btn-primary">Add Multiple</button>
