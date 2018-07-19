@@ -31,7 +31,7 @@ export class AppComponent {
       this.dummyDataService.addServices(tmpServices);
     }
     else {
-      let tmpService = new Service(1, 'Single Service', "test", '', ['']);
+      let tmpService = new Service(1, 'Single Service', "test", '', [''], false);
       this.dummyDataService.addService(tmpService);
     }
   }

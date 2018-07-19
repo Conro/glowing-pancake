@@ -11,11 +11,7 @@ export class DummyDataService {
   activeServices: Service[] = [];
   public allServices: Service[] = [];
 
-  constructor(private http: Http) { }
-
-  ngOnInit() {
-    this.allServices = this.getAllServices();
-  }
+  constructor(private http: Http) { this.allServices = this.getAllServices(); }
 
   getAllServices(): Service[] {
     return SERVICES;
