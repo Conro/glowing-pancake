@@ -35,8 +35,15 @@ export class DummyDataService {
   removeService(service: Service) {
     this.activeServices.forEach( (item, index) => {
       if(item.id === service.id) {
+        this.allServices.forEach( (allService) => {
+          if (service.id == allService.id) {
+            allService.isUsed = false;
+          }
+          
+        });
         this.activeServices.splice(index,1);
       }
     });
+
   }
 }

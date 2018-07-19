@@ -5,6 +5,7 @@ export class Service {
        public desc: string,
        public img: string,
        public keywords: string[],
-       public isUsed: boolean
+       public isUsed: boolean,
+       public suggestedIds: number[]
     ) {}
  }
