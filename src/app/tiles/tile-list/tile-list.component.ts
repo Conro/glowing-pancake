@@ -2,8 +2,6 @@ import { DummyDataService } from './../../Services/dummy-data.service';
 import { Service } from './../../Models/service.model';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 
-import {CarouselModule} from 'primeng/carousel';
-
 @Component({
   selector: 'app-tile-list',
   templateUrl: './tile-list.component.html',
