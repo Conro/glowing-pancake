@@ -29,10 +29,10 @@ export class MemberFormComponent implements OnInit {
     const house = '';
     const car = '';
     const pet = '';
-    const name = '';
-    const age = '';
-    const branch = '';
-    const rank = '';
+    const name = 'John Doe';
+    const age = '25';
+    const branch = 'Airforce';
+    const rank = 'E-5';
 
     this.entryForm = new FormGroup({
       'house': new FormControl(house),
