@@ -18,13 +18,13 @@ export const SERVICES: Service[] = [
   { id: 15, name: 'High Value Home', desc: '', img: '../assets/images/high-value-home.jpg', keywords: ['high', 'value'], isUsed: false, suggestedIds:[11]},
   { id: 16, name: 'Jewelry Insurance', desc: '', img: '../assets/images/jewerly-insruance.jpg', keywords: ['jewelry'], isUsed: false, suggestedIds:[10]},
   { id: 15, name: 'Cruises', desc: '', img: '../assets/images/cruises.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[]},
-  { id: 16, name: 'Flights', desc: '', img: '../assets/images/flights.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
-  { id: 14, name: 'Hotels & Resorts', desc: '', img: '../assets/images/hotels-and-resorts.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
-  { id: 17, name: 'Travel Insurance', desc: '', img: '../assets/images/travel-insurance.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
-  { id: 18, name: 'Home Security', desc: '', img: '../assets/images/home-security.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
-  { id: 19, name: 'Moving & Storage', desc: '', img: '../assets/images/moving.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed'], isUsed: false, suggestedIds:[12]},
-  { id: 20, name: 'Flowers', desc: '', img: '../assets/images/ftd_bingo.png', keywords: ['pcs', 'deployment', 'deployed', 'wife'], isUsed: false, suggestedIds:[12]},
-  { id: 21, name: 'FedEx', desc: '', img: '../assets/images/shipping.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed'], isUsed: false, suggestedIds:[12]},
-  { id: 22, name: 'TurboTax', desc: '', img: '../assets/images/tax-preparation.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
-  { id: 23, name: 'Car Rentals', desc: '', img: '../assets/images/car-rental.jpg', keywords: [''], isUsed: false, suggestedIds:[12]}
+  { id: 16, name: 'Flights', desc: '', img: '../assets/images/flights.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[]},
+  { id: 14, name: 'Hotels & Resorts', desc: '', img: '../assets/images/hotels-and-resorts.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[]},
+  { id: 17, name: 'Travel Insurance', desc: '', img: '../assets/images/travel-insurance.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[]},
+  { id: 18, name: 'Home Security', desc: '', img: '../assets/images/home-security.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[]},
+  { id: 19, name: 'Moving & Storage', desc: '', img: '../assets/images/moving.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed'], isUsed: false, suggestedIds:[]},
+  { id: 20, name: 'Flowers', desc: '', img: '../assets/images/ftd_bingo.png', keywords: ['pcs', 'deployment', 'deployed', 'wife'], isUsed: false, suggestedIds:[]},
+  { id: 21, name: 'FedEx', desc: '', img: '../assets/images/shipping.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed'], isUsed: false, suggestedIds:[]},
+  { id: 22, name: 'TurboTax', desc: '', img: '../assets/images/tax-preparation.jpg', keywords: [''], isUsed: false, suggestedIds:[]},
+  { id: 23, name: 'Car Rentals', desc: '', img: '../assets/images/car-rental.jpg', keywords: [''], isUsed: false, suggestedIds:[]}
 ];
