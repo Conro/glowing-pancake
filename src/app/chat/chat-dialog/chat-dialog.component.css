@@ -27,6 +27,7 @@
     position:absolute;
     bottom: 10%;
     right: 2%;
+    left: 2%;
 }
 
 .message.to + .message.to,
