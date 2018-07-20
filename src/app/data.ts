@@ -22,9 +22,9 @@ export const SERVICES: Service[] = [
   { id: 14, name: 'Hotels & Resorts', desc: '', img: '../assets/images/hotels-and-resorts.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
   { id: 17, name: 'Travel Insurance', desc: '', img: '../assets/images/travel-insurance.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
   { id: 18, name: 'Home Security', desc: '', img: '../assets/images/home-security.jpg', keywords: ['marriage, married'], isUsed: false, suggestedIds:[12]},
-  { id: 19, name: 'Moving & Storage', desc: '', img: '../assets/images/moving.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed', 'moving'], isUsed: false, suggestedIds:[12]},
+  { id: 19, name: 'Moving & Storage', desc: '', img: '../assets/images/moving.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed'], isUsed: false, suggestedIds:[12]},
   { id: 20, name: 'Flowers', desc: '', img: '../assets/images/ftd_bingo.png', keywords: ['pcs', 'deployment', 'deployed', 'wife'], isUsed: false, suggestedIds:[12]},
-  { id: 21, name: 'FedEx', desc: '', img: '../assets/images/shipping.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed', 'moving'], isUsed: false, suggestedIds:[12]},
+  { id: 21, name: 'FedEx', desc: '', img: '../assets/images/shipping.jpg', keywords: ['moving', 'pcs', 'deployment', 'deployed'], isUsed: false, suggestedIds:[12]},
   { id: 22, name: 'TurboTax', desc: '', img: '../assets/images/tax-preparation.jpg', keywords: [''], isUsed: false, suggestedIds:[12]},
   { id: 23, name: 'Car Rentals', desc: '', img: '../assets/images/car-rental.jpg', keywords: [''], isUsed: false, suggestedIds:[12]}
 ];
